@@ -127,6 +127,10 @@ contract Package {
         return packageEnabled; 
     }
 
+    function retrieve_package_hash(string calldata version_number) public view returns (string memory) {
+        return cid_hashMap[version_number];
+    }
+
     function get_description() public view returns (string memory) {
         return description;
     }
